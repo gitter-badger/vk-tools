@@ -1,0 +1,40 @@
+body{
+    margin:0px;
+    background:#E8E8E8;
+}
+
+.header {
+    height:50px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    width:auto;
+    margin:0px auto;
+}
+.content {
+    width:auto;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: auto;
+    margin: 20px auto;
+	  padding: 10px;
+}
+
+.logotext {
+	text-align: center;
+    margin: 20px auto;
+}
+
+.footerholder {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.footer {
+    background: none repeat scroll 0 0 #989898;
+    height: 20px;
+    margin: auto;
+    width: 160px;
+}
