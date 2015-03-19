@@ -3,4 +3,4 @@ vk-tools
 
 installing
 
-''' npm install fs util nconf nw.gui '''
+`npm install fs util nconf`
