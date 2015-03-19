@@ -4,11 +4,11 @@ var util = require('util');
 var nconf = require('nconf');
 var gui = require('nw.gui');
 
-nconf.use('file', { file: './message.json' });
+nconf.use('file', { file: './config.json' });
 nconf.load();
 
 var credentials = {
-    client_id: 4830258,
+    client_id: nconf.get('idpri'),
     login:     nconf.get('login'),
     pass:      nconf.get('pass'),
 };
@@ -26,11 +26,13 @@ function op()
 {
 document.getElementById('loginpok').innerHTML='Логин: '+nconf.get('login');
 document.getElementById('passpok').innerHTML='Пароль: '+nconf.get('pass');
+document.getElementById('idpripok').innerHTML='Пароль: '+nconf.get('idpri');
 }
 
 function writeconfig(){
   nconf.set('login', document.writeform.login.value);
   nconf.set('pass', document.writeform.pass.value);
+  nconf.set('idpri', document.writeform.idpri.value);
   nconf.save(function (err) {
   if (err) {
     console.error(err.message);
@@ -39,11 +41,6 @@ function writeconfig(){
   console.log('Configuration saved successfully.');
 });
 
-}
-
-function shw(obj){
-  obj.var1.value=nconf.get('login');
-  obj.var2.value=nconf.get('pass');
 }
 
 function tstreq(){
