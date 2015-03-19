@@ -1,6 +1,6 @@
 # vk-tools
 vk-tools
 
-installing
+Installing:
 
 `npm install fs util nconf`
