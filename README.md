@@ -2,7 +2,7 @@
 
 Installing:
 
-`npm install fs util nconf`
+`npm install cheerio request xtend`
 
 
 To-do:
