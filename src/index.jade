@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title Simple Text Editor
+    meta(charset='UTF-8')
+    script(src='js/app.js')
+    link(rel='stylesheet', type='text/css', href='css/main.css')
+  body(onload='op();')
+    header
+      .header
+        .logotext vk-tools
+    .content
+      #logua
+      #logua
+      #form
+        form(name='writeform')
+          strong Установить параметры:
+          br
+          input(type='button', name='btn', value='Установить', onclick='writeconfig()')
+          br
+          Логин:
+          input(type='text', name='login')
+          br
+          Пароль:
+          input(type='text', name='pass')
+          br
+          ID приложения:
+          input(type='text', name='idpri')
+        br
+        br
+        strong Текущая конфигурация:
+        #loginpok
+        #passpok
+        #idpripok
+        br
+        strong Информация о пользователе:
+        br
+        Айди:
+        input(type='text', name='id')
+        input(type='button', name='btn', value='Выполнить', onclick='tstreq()')
+        br
+        #infouser
+    footer
+      .footerholder
+        .footer
+          Copyright footer

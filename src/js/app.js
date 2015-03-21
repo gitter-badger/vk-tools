@@ -1,10 +1,10 @@
-var vkApi = require('./vk-dirty-api.js');
+var vkApi = require('vk-dirty-api');
 var fs = require('fs');
 var util = require('util');
 var nconf = require('nconf');
 var gui = require('nw.gui');
 
-nconf.use('file', { file: './config.json' });
+nconf.use('file', { file: '../config.json' });
 nconf.load();
 
 var credentials = {

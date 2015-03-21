@@ -2,7 +2,7 @@
 
 Installing:
 
-`npm install cheerio nconf request xtend`
+`npm install grunt grunt-contrib-less grunt-jade grunt-node-webkit-builder node-webkit-builder less-plugin-autoprefix grunt-contrib-copy`
 
 
 To-do:

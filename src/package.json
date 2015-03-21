@@ -7,5 +7,10 @@
     "toolbar": true,
     "width": 1039,
     "height": 600
+  },
+  "devDependencies": {
+    "nconf": "^0.7.1",
+    "request": "^2.53.0",
+    "vk-dirty-api": "^1.0.0"
   }
 }
