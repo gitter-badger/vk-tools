@@ -1,5 +1,6 @@
 {
-  "name": "nw-demo",
+  "name": "vk-tools",
+  "version": "1.0.0",
   "main": "index.html",
   "window": {
     "frame": true,
