@@ -2,11 +2,10 @@
 
 Installing:
 
-`npm install grunt grunt-contrib-less grunt-jade grunt-node-webkit-builder node-webkit-builder less-plugin-autoprefix grunt-contrib-copy`
-
-`cd src`
-
 `npm install`
+
+Build:
+`grunt`
 
 
 To-do:

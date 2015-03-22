@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   jade: {
     html: {
       files: {
-        'build/': ['src/index.jade']
+        'dist/': ['src/index.jade']
       },
       options: {
         client: false,
@@ -22,18 +22,18 @@ module.exports = function(grunt) {
                 new (require('less-plugin-autoprefix'))({browsers : [ "last 2 versions" ]})
                 ]
           },
-          files: {"build/css/main.css": "src/less/main.less"}
+          files: {"dist/css/main.css": "src/less/main.less"}
       }
   },
 copy: {
   main: {
     files: [
       // includes files within path
-      { src: ['src/package.json'], dest: 'build/package.json'},
+      { src: ['package.json'], dest: 'dist/package.json'},
 
       // includes files within path and its sub-directories
-      {cwd: 'src', src: 'node_modules/**/*', dest: 'build', expand: true},
-      {cwd: 'src', src: 'js/**/*', dest: 'build', expand: true},
+      {cwd: '', src: 'node_modules/**/*', dest: 'dist', expand: true},
+      {cwd: 'src', src: 'js/**/*', dest: 'dist', expand: true},
 
     ],
   },
@@ -44,7 +44,7 @@ copy: {
       platforms: ['win64'],
       buildDir: './builds',
       },
-  src: ['./build/**/*']}
+  src: ['./dist/**/*']}
 
   });
 
