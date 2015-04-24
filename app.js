@@ -4,7 +4,7 @@ var util = require('util');
 var nconf = require('nconf');
 var request = require('request');
 
-
+//test
 
 var express = require('express');
 var path = require('path');
@@ -35,7 +35,7 @@ var vk = new vkApi(
         console.log('Successfully authenticated / access_token:', access_token);
 });
 
-app.get('/searching', function(req, res){
+app.get('/searchingvk', function(req, res){
 var val = req.query.search;
 vk.api('wall.get', {
     owner_id: val,

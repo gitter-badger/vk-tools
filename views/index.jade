@@ -5,12 +5,15 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
    h2 Вк тесты
-   input#search(type="search", placeholder="Выдать содержимое стены")
-   #results
+   input#searchvk(type="search", placeholder="Выдать содержимое стены")  
+   br
+   input#submvk(type="submit")
+   #resultsvk
 
    h2 Двач тесты
    input#search2ch(type="search", placeholder="Пост с двача")
+   input#subm2ch(type="submit")   
    #results2ch
 
-   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
    script(src="/javascripts/main.js")
