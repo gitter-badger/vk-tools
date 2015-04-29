@@ -9,11 +9,19 @@ $(function(){
 });
 
 
+$(function onload(){
+    $.get('/getusrpass', function(data) {
+       $('#infovk').html(data);
+ });
+ });
+
+/*
 $(function(){
  $('#subm2ch').on('keyup', function(e){
      var parameters = { search: $("#search2ch").val() };
        $.get( '/search2ch',parameters, function(data) {
        $('#results2ch').html('<pre>'+data+'</pre>');
  });
+});
 });
 */

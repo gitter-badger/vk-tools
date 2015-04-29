@@ -3,17 +3,23 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(src="/javascripts/main.js")  
+  body(onload="onload()")
    h2 Вк тесты
    input#searchvk(type="search", placeholder="Выдать содержимое стены")  
    br
    input#submvk(type="submit")
    #resultsvk
 
+   h3 VK:
+   #infovk
+   
+   
    h2 Двач тесты
    input#search2ch(type="search", placeholder="Пост с двача")
+   br
    input#subm2ch(type="submit")   
    #results2ch
-
-   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
-   script(src="/javascripts/main.js")
+     
+   

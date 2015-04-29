@@ -35,6 +35,12 @@ var vk = new vkApi(
         console.log('Successfully authenticated / access_token:', access_token);
 });
 
+app.get('/getusrpass', function(req, res){
+res.send('<h1>Login:'+nconf.get('login')+'<br>'+'<h1>Pass:'+nconf.get('pass')+'<br>'+'<h1>App id:'+nconf.get('idpri'));
+});
+
+
+
 app.get('/searchingvk', function(req, res){
 var val = req.query.search;
 vk.api('wall.get', {
