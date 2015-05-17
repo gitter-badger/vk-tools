@@ -16,5 +16,8 @@
     "request": "^2.53.0",
     "serve-favicon": "~2.2.0",
     "vk-dirty-api": "^1.0.0"
+  },
+  "devDependencies": {
+    "vk-dirty-api": "^1.0.0"
   }
 }

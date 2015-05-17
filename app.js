@@ -4,19 +4,19 @@ var util = require('util');
 var nconf = require('nconf');
 var request = require('request');
 
-//test
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+var vkfun = require('./lib/functions.js');
+
 
 nconf.use('file', { file: './config.json' });
 nconf.load();
@@ -35,17 +35,38 @@ var vk = new vkApi(
         console.log('Successfully authenticated / access_token:', access_token);
 });
 
-app.get('/getusrpass', function(req, res){
-res.send('<h1>Login:'+nconf.get('login')+'<br>'+'<h1>Pass:'+nconf.get('pass')+'<br>'+'<h1>App id:'+nconf.get('idpri'));
+app.get('/settings', function(req, res) {
+    res.render('settings.jade', {
+        password: nconf.get('pass'),
+        login: nconf.get('login'),
+        app: nconf.get('idpri'),
+        title: "Settings"
+    });
 });
 
+function checkonline(){
+  var interval = setInterval( function() {
+  vkfun.getonline1();
+}, 60000);
+};
+checkonline();
 
+
+//vkfun.getonline1();
+var text112 = fs.readFileSync('online.file','utf8')
+
+app.get('/tests', function(req, res) {
+    res.render('tests.jade', {
+        online: text112,
+        title: "Tests"
+    });
+});
 
 app.get('/searchingvk', function(req, res){
 var val = req.query.search;
 vk.api('wall.get', {
     owner_id: val,
-    count: 1
+    count: 5
   }, function(err, info) {
    if(err)
     return console.error('Unable to complete request', err);

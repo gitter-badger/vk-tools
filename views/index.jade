@@ -1,25 +1,24 @@
 doctype html
+extends layout
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
-    script(src="/javascripts/main.js")  
-  body(onload="onload()")
-   h2 Вк тесты
-   input#searchvk(type="search", placeholder="Выдать содержимое стены")  
-   br
-   input#submvk(type="submit")
-   #resultsvk
-
-   h3 VK:
-   #infovk
+  body
+  block content
+   center
+     h1
+      a#link(href='/') Main 
+      a#link(href='/settings') Settings 
+      a#link(href='/tests') Tests 
+     h2 Вк тесты
+     input#searchvk(type="search", placeholder="Выдать содержимое стены")  
+     br
+     input#submvk(type="submit")
+     #resvk1
+      #resultsvk
    
-   
-   h2 Двач тесты
-   input#search2ch(type="search", placeholder="Пост с двача")
-   br
-   input#subm2ch(type="submit")   
-   #results2ch
+     h2 Двач тесты
+     input#search2ch(type="search", placeholder="Пост с двача")
+     br
+     input#subm2ch(type="submit")   
+     #results2ch
      
    

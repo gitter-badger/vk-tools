@@ -1,0 +1,14 @@
+doctype html
+extends layout
+html
+  body
+    block content
+     center  
+      h1
+       a#link(href='/') Main 
+       a#link(href='/settings') Settings 
+       a#link(href='/tests') Tests 
+      h1 #{login}
+      h1 #{password}
+      h1 #{app}
+      

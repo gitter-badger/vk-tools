@@ -1,21 +1,20 @@
-
 $(function(){
  $('#submvk').on("click", function(e){
      var parameters = { search: $("#searchvk").val() };
        $.get('/searchingvk', parameters, function(data) {
-       $('#resultsvk').html('<strong>Номер поста:</strong>'+data.items[0].id.toString() + '<p>' +'<strong>id владельца:</strong>'+data.items[0].owner_id.toString() + '<p>' + '<strong>Дата:</strong>'+data.items[0].date.toString());
+       var displayvk = _.each(data.items,function(items) {$("#resultsvk").append('<div id="boxvk">'+' ID:'+items.id+'<br>DATE:'+moment.unix(items.date).format("dddd, MMMM Do YYYY, h:mm:ss a"));});
      });
  });
 });
 
-
+/*
 $(function onload(){
     $.get('/getusrpass', function(data) {
        $('#infovk').html(data);
  });
  });
 
-/*
+
 $(function(){
  $('#subm2ch').on('keyup', function(e){
      var parameters = { search: $("#search2ch").val() };
