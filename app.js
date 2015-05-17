@@ -5,6 +5,9 @@ var nconf = require('nconf');
 var request = require('request');
 
 var express = require('express');
+var stylus = require('stylus');
+var autoprefixer = require('autoprefixer-stylus');
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -16,7 +19,6 @@ var users = require('./routes/users');
 var app = express();
 
 var vkfun = require('./lib/functions.js');
-
 
 nconf.use('file', { file: './config.json' });
 nconf.load();
@@ -44,16 +46,27 @@ app.get('/settings', function(req, res) {
     });
 });
 
+app.use(stylus.middleware({
+  src: path.join(__dirname, 'public'),
+  compile: function(str, path) {
+    return stylus(str)
+      .use(autoprefixer())   // autoprefixer
+      .set('filename', path) // @import
+      .set('compress', true) // compress
+    ;
+  }
+}));
+
+app.use(express.static(__dirname + '/public'));
+
 function checkonline(){
   var interval = setInterval( function() {
   vkfun.getonline1();
 }, 60000);
 };
-checkonline();
 
-
-//vkfun.getonline1();
-var text112 = fs.readFileSync('online.file','utf8')
+//checkonline();
+//var text112 = fs.readFileSync('online.file','utf8')
 
 app.get('/tests', function(req, res) {
     res.render('tests.jade', {
