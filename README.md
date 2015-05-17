@@ -7,10 +7,9 @@ Installing:
 `npm install`
 
 
-Build:
+Run:
 
-`grunt`
-
+`npm start`
 
 
 To-do:
