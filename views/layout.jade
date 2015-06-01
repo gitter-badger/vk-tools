@@ -8,4 +8,11 @@ html
     script(src="//cdn.jsdelivr.net/momentjs/2.10.3/moment.min.js")
     script(src="/javascripts/main.js")    
   body
+    block header
+     center
+      h1
+        a#link(href='/') Main 
+        a#link(href='/settings') Settings 
+        a#link(href='/tests') Tests 
     block content
+    include footer

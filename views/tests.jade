@@ -7,11 +7,7 @@ html
     script(src="/javascripts/main.js")  
   body
     block content 
-     center  
-      h1
-       a#link(href='/') Main 
-       a#link(href='/settings') Settings 
-       a#link(href='/tests') Tests 
+     center 
       #sempai
        script(type='text/javascript').
            if(#{online} == 1){
@@ -19,6 +15,6 @@ html
            }else{
              $('#sempai').append('<h1>'+"семпай оффлайн!!!"+'</h1>');
            };
-      h1 Лесков онлайн?  #{online}
+
 
       

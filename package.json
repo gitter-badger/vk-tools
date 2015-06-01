@@ -21,6 +21,7 @@
     "autoprefixer-stylus": "^0.6.0",
     "nib": "^1.1.0",
     "stylus": "^0.51.1",
+    "underscore": "^1.8.3",
     "vk-dirty-api": "^1.0.0"
   }
 }

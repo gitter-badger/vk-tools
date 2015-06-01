@@ -65,8 +65,8 @@ function checkonline(){
 }, 60000);
 };
 
-//checkonline();
-//var text112 = fs.readFileSync('online.file','utf8')
+checkonline();
+var text112 = fs.readFileSync('online.file','utf8')
 
 app.get('/tests', function(req, res) {
     res.render('tests.jade', {
