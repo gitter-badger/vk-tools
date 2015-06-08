@@ -18,7 +18,7 @@
     "vk-dirty-api": "^1.0.0"
   },
   "devDependencies": {
-    "autoprefixer-stylus": "^0.6.0",
+    "autoprefixer-stylus": "^0.7.0",
     "nib": "^1.1.0",
     "stylus": "^0.51.1",
     "underscore": "^1.8.3",
