@@ -1,5 +1,9 @@
-config.json
+*.sublime-workspace
+.DS_Store
+.idea
+bower_components
+build
+coverage
+dist
 node_modules
-.DS_store
 npm-debug.log
-online.file
