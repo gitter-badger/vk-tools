@@ -11,6 +11,8 @@
 
 ## Techniques
 
+[![Join the chat at https://gitter.im/fenque/vk-tools](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fenque/vk-tools?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 - Universal (formerly isomorphic) and functional application architecture. 
 - [React](http://facebook.github.io/react/) with server side rendering on [expressjs](http://expressjs.com/) backend.
 - Stateless vanilla [Flux](https://facebook.github.io/flux/) with atomic global immutable app state like [Om](https://github.com/omcljs/om) via [immutable.js](http://facebook.github.io/immutable-js) for super fast rendering and sane state management.
